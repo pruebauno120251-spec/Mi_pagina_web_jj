@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hobbies</title>
+  <link rel="stylesheet" href="styles4.css">
+</head>
+<body>
+
+<header class="top">
+  <nav class="menu">
+    <a href="index.html"> INICIO </a>
+    <button onclick="cambiarHobby('dibujar')">DIBUJAR</button>
+    <button onclick="cambiarHobby('estudiar')">ESTUDIAR</button>
+    <button onclick="cambiarHobby('fut')">JUGAR</button>
+    <button onclick="cambiarHobby('leer')">LEER</button>
+  </nav>
+</header>
+
+<section class="card">
+  <img src="imagenes/hobbies.png" class="juan">
+
+  <h1 id="titulo">DIBUJAR</h1>
+  <p class="subtitle" id="subtitulo">Plasmar mi imaginación a traves del lápiz y papel</p>
+
+  <div class="content">
+    <div class="texto">
+      <h2 id="titulo2">Dibujar mi imaginación</h2>
+      <p id="descripcion">
+        Disfruto dibujar porque me relaja y me permite expresar ideas.
+      </p>
+    </div>
+
+    <div class="imagen">
+      <img src="imagenes/dibujoo.jpg" id="imagen">
+    </div>
+  </div>
+</section>
+
+<!-- JavaScript dentro del HTML -->
+<script>
+  function cambiarHobby(hobby) {
+    const titulo = document.getElementById("titulo");
+    const subtitulo = document.getElementById("subtitulo");
+    const titulo2 = document.getElementById("titulo2");
+    const descripcion = document.getElementById("descripcion");
+    const imagen = document.getElementById("imagen");
+
+    if (hobby === "dibujar") {
+      titulo.textContent = "DIBUJAR";
+      subtitulo.textContent = "Plasmar mi imaginación a traves del lápiz y papel";
+      titulo2.textContent = "Dibujar mi imaginación";
+      descripcion.textContent = "Disfruto dibujar porque me relaja y me permite expresar ideas.";
+      imagen.src = "imagenes/dibujoo.jpg";
+    }
+
+    if (hobby === "estudiar") {
+      titulo.textContent = "ESTUDIAR";
+      subtitulo.textContent = "Aprender cosas nuevas cada día";
+      titulo2.textContent = "Estudiar para superarme";
+      descripcion.textContent = "Me gusta estudiar para mejorar mis conocimientos.";
+      imagen.src = "imagenes/estudiar.jpg";
+    }
+
+    if (hobby === "fut") {
+      titulo.textContent = "FÚTBOL";
+      subtitulo.textContent = "Mantenerme activo y saludable";
+      titulo2.textContent = "Practicar fútbol";
+      descripcion.textContent = "El fútbol me ayuda a despejar la mente y trabajar en equipo.";
+      imagen.src = "imagenes/futbol.jpg";
+    }
+
+    if (hobby === "leer") {
+      titulo.textContent = "LEER";
+      subtitulo.textContent = "Descubrir nuevas ideas";
+      titulo2.textContent = "Hábito de lectura";
+      descripcion.textContent = "Leer mejora mi vocabulario y creatividad.";
+      imagen.src = "imagenes/leerr.jpg";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi persona</title>
+  <link rel="stylesheet" href="styles2.css">
+</head>
+<body>
+
+<img src="imagenes/yo.jpg" class="juan">
+
+<header class="header">
+  <h1 id="titulo">¿QUIEN SOY?</h1>
+  <p id="subtitulo">Conoceme...</p>
+</header>
+
+<nav class="menu">
+  <a href="index.html"> INICIO </a>
+  <button class="nav-btn" onclick="mostrar('soy')">QUIEN SOY</button>
+  <button class="nav-btn" onclick="mostrar('origen')">DE DONDE SOY</button>
+  <button class="nav-btn" onclick="mostrar('meta')">A DONDE VOY</button>
+  <button class="nav-btn" onclick="mostrar('contacto')">CONTACTAME</button>
+</nav>
+
+<section class="contenido">
+  <div class="texto">
+    <h2 id="textoPrincipal"> Mi persona </h2>
+    <p id="descripcion">
+        Holaaa, yo soy Juan José, una persona apasionada por la tecnología y el aprendizaje constante, una persona de pocas palabras pero con un buen carisma y actitud, que siempre sigue adelante y no se rinde. <br>
+        Me gustan los desafios, y si son difíciles mucho mejor, lo fácil es aburrido. <br>
+        Soy un estratega y con mete creativa... <br>
+        Actualmente tengo 18 años y estoy cursando una Ingeniería, la Ing. en Sistemas Computacionales. 
+
+    </p>
+  </div>
+
+  <div class="imagen">
+    <img id="imagenContenido" src="imagenes/snap.jpg">
+  </div>
+</section>
+
+<!-- JAVASCRIPT -->
+<script>
+  function mostrar(seccion) {
+    const titulo = document.getElementById("titulo");
+    const subtitulo = document.getElementById("subtitulo");
+    const texto = document.getElementById("textoPrincipal");
+    const descripcion = document.getElementById("descripcion");
+    const imagen = document.getElementById("imagenContenido");
+
+    if (seccion === "soy") {
+      titulo.innerHTML = "¿QUIEN SOY?";
+      subtitulo.innerHTML = "Conoceme...";
+      texto.innerHTML = "Mi persona";
+      descripcion.innerHTML = 
+        "Holaaa, yo soy Juan José, una persona apasionada por la tecnología y el aprendizaje constante, una persona de pocas palabras pero con un buen carisma y actitud, que siempre sigue adelante y no se rinde. <br> Me gustan los desafios, y si son difíciles mucho mejor, lo fácil es aburrido.<br>Soy un estratega y con mete creativa...<br>Actualmente tengo 18 años y estoy cursando una Ingeniería, la Ing. en Sistemas Computacionales.";
+      imagen.src = "imagenes/snap.jpg";
+    }
+
+    if (seccion === "origen") {
+      titulo.innerHTML = "¿DE DÓNDE SOY?";
+      subtitulo.innerHTML = "Mis raíces";
+      texto.innerHTML = "Soy de San Nicolas Guadalupe";
+      descripcion.innerHTML =
+        "Vivo en San Nicolas Guadalupe, una comunidad muy bonita, llena de cultura y tradiciones, es un pueblo mazahua, y estoy orgullodo de ser haber crecido en este bello pueblo, mi pueblo...";
+      imagen.src = "imagenes/iglesia.jpg";
+    }
+
+    if (seccion === "meta") {
+      titulo.innerHTML = "¿A DÓNDE VOY?";
+      subtitulo.innerHTML = "Mis metas";
+      texto.innerHTML = "Quiero ser Ingeniero en Sistemas";
+      descripcion.innerHTML =
+        "Mi objetivo es crecer profesionalmente en el área de tecnología y desarrollo de software. <br> Fortalecer mis conocimientos en diversas areas que me puedan ayudar a alcanzar mis objetivos. <br> Trabajar en proyectos personales y colaborar en equipo con personas con mis mismos objetivos.";
+      imagen.src = "imagenes/exito.jpg";
+    }
+
+    if (seccion === "contacto") {
+      titulo.innerHTML = "CONTÁCTAME";
+      subtitulo.innerHTML = "Hablemos";
+      texto.innerHTML = "¿Quieres saber más de mí?";
+      descripcion.innerHTML =
+        "Puedes contactarme por correo o redes sociales para proyectos o colaboración. <br> <br> WhatsApp: +52 7121887517 <br>   <a href='https://www.facebook.com/share/17mUtVKGYh/' target='_blank' > Facebook: Juan Pascual </a> <br> Correo electronico: pruebauno120251@gmail.com";
+      imagen.src = "imagenes/RedesS.jpg";
+    }
+  }
+</script>
+
+</body>
+</html>

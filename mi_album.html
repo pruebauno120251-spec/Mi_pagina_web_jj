@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Álbum Personal</title>
+  <link rel="stylesheet" href="styles5.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 id="tituloPrincipal">MI ÁLBUM DE FOTOS</h1>
+  <p id="descripcionPrincipal">
+    Estas son algunas fotos tomadas por mí y otras que descargué.
+  </p>
+</header>
+
+<nav class="menu">
+  <a href="index.html"> INICIO </a>
+  <button onclick="mostrarFotos()">ALBUM DE FOTOS</button>
+  <button onclick="mostrarVideos()">ALBUM DE VIDEOS</button>
+</nav>
+
+<section class="album">
+  <h2 id="subtitulo">Galería de Fotos</h2>
+
+  <div class="galeria" id="galeria">
+    
+  </div>
+</section>
+
+<script>
+  function mostrarFotos() {
+    document.getElementById("tituloPrincipal").textContent = "MI ÁLBUM DE FOTOS";
+    document.getElementById("descripcionPrincipal").textContent =
+      "Estas son algunas fotos tomadas por mí y otras que descargué.";
+    document.getElementById("subtitulo").textContent = "Galería de Fotos";
+
+    document.getElementById("galeria").innerHTML = `
+      <div class="foto"><img src="imagenes/jj.jpg"></div>
+      <div class="foto"><img src="imagenes/roca.jpg"></div>
+      <div class="foto"><img src="imagenes/paisaje.jpg"></div>
+      <div class="foto"><img src="imagenes/linux.jpg"></div>
+      <div class="foto"><img src="imagenes/juanjo.jpg"></div>
+      <div class="foto"><img src="imagenes/tauro.jpg"></div>
+      <div class="foto"><img src="imagenes/arbol.jpg"></div>
+      <div class="foto"><img src="imagenes/perro.jpg"></div>
+      <div class="foto"><img src="imagenes/pinwi.jpg"></div>
+      <div class="foto"><img src="imagenes/ine.jpg"></div>
+      <div class="foto"><img src="imagenes/1.jpg"></div>
+      <div class="foto"><img src="imagenes/poli.jpg"></div>
+    `;
+  }
+
+  function mostrarVideos() {
+    document.getElementById("tituloPrincipal").textContent = "MI ÁLBUM DE VIDEOS";
+    document.getElementById("descripcionPrincipal").textContent =
+      "Estos son algunos videos que representan momentos y contenidos de mi interés.";
+    document.getElementById("subtitulo").textContent = "Galería de Videos";
+
+    document.getElementById("galeria").innerHTML = `
+      <div class="foto">
+        <video controls>
+          <source src="videos/pan.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="foto">
+        <video controls>
+          <source src="videos/spider.mp4" type="video/mp4">
+        </video>
+      </div>
+      <div class="foto">
+        <video controls>
+          <source src="videos/gato.mp4" type="video/mp4">
+        </video>
+      </div>
+    `;
+  }
+
+
+  window.onload = mostrarFotos;
+</script>
+
+</body>
+</html>

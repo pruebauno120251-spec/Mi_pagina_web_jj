@@ -97,3 +97,21 @@ a{
   color: gray;
   padding: 0 15px 15px;
 }
+
+/* Responsivo */
+@media (max-width: 600px){
+    .cards{
+        display: flex;
+        flex-direction: column;
+    }
+    .card{
+      width: 100%;
+      height: auto;
+      
+    }
+    .card img {
+      max-width: 100%; 
+      height: auto;
+    }
+ 
+}
